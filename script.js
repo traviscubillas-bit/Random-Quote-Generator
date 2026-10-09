@@ -1,4 +1,3 @@
-
 const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
 const newQuoteButton = document.getElementById("new-quote");
