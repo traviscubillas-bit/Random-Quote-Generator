@@ -30,8 +30,8 @@ async function getQuote() {
 
         // 4. Apply the image to the page background
         document.body.style.backgroundImage =
-            `linear-gradient(rgba(15,23,42,0.25),` +
-            `rgba(15,23,42,0.25)),` +
+            `linear-gradient(rgba(15,23,42,0.55),` +
+            `rgba(15,23,42,0.55)),` +
             `url("${imageUrl}")`;
         document.body.style.backgroundSize = "cover";
         document.body.style.backgroundPosition = "center";
