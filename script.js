@@ -6,7 +6,6 @@ const statusElement = document.getElementById("status");
 
 async function getQuote() {
     button.disabled = true;
-    statusElement.textContent = "Loading quote and image...";
 
     try {
         // 1. Get a random quote from DummyJSON
@@ -37,8 +36,6 @@ async function getQuote() {
         document.body.style.backgroundPosition = "center";
         document.body.style.backgroundRepeat = "no-repeat";
         document.body.style.backgroundAttachment = "fixed";
-
-        statusElement.textContent = "Quote and image loaded!";
 
     } catch (error) {
         console.error("Error:", error);
