@@ -18,6 +18,14 @@ async function getQuote() {
         }
 
         const quoteData = await quoteResponse.json();
+        if (
+            typeof quoteData.quote !== "string" ||
+            typeof quoteData.author !== "string" ||
+            !quoteData.quote.trim() ||
+            !quoteData.author.trim()
+        ) {
+            throw new Error("The quote service returned invalid data.");
+        }
 
         // 2. Display the quote and author
         quoteElement.textContent = quoteData.quote;
@@ -41,7 +49,7 @@ async function getQuote() {
         console.error("Error:", error);
 
         statusElement.textContent =
-            "Could not load quote. Please try again.";
+            "Could not fetch data. Please try again.";
 
     } finally {
         // 5. Enable the button again
